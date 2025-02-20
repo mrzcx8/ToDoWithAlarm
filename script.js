@@ -105,9 +105,9 @@ function closeModal() {
 }
 
 function playNotificationSound() {
-    // Gunakan URL suara online
-    const audio = new Audio('https://www.soundjay.com/button/beep-07.mp3');
+    console.log("Playing notification sound..."); // Debugging
+    const audio = new Audio('notification.mp3'); // Pastikan file 'notification.mp3' ada di folder proyek
     audio.play().catch(error => {
-        console.error("Error playing sound:", error);
+        console.error("Error playing sound:", error); // Error handling
     });
 }
