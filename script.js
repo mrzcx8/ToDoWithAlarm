@@ -91,4 +91,14 @@ function setAlarm(task) {
     }
 }
 
-function showReminder(message
+function showReminder(message) {
+    const modal = document.getElementById('reminderModal');
+    const reminderMessage = document.getElementById('reminderMessage');
+    reminderMessage.textContent = message;
+    modal.style.display = 'flex';
+}
+
+function closeModal() {
+    const modal = document.getElementById('reminderModal');
+    modal.style.display = 'none';
+}
