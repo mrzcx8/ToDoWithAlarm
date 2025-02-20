@@ -85,6 +85,7 @@ function setAlarm(task) {
         const timeDiff = alarmTime - now;
         setTimeout(() => {
             showReminder(task.text);
+            playNotificationSound(); // Memainkan suara notifikasi
         }, timeDiff);
     } else {
         alert('The alarm time is in the past!');
@@ -101,4 +102,12 @@ function showReminder(message) {
 function closeModal() {
     const modal = document.getElementById('reminderModal');
     modal.style.display = 'none';
+}
+
+function playNotificationSound() {
+    // Gunakan URL suara online
+    const audio = new Audio('https://www.soundjay.com/button/beep-07.mp3');
+    audio.play().catch(error => {
+        console.error("Error playing sound:", error);
+    });
 }
