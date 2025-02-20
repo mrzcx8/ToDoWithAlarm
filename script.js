@@ -1,4 +1,4 @@
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 function addTask() {
     const taskInput = document.getElementById('taskInput');
@@ -19,6 +19,7 @@ function addTask() {
     };
 
     tasks.push(task);
+    saveTasksToLocalStorage(); // Simpan ke Local Storage
     renderTasks();
     taskInput.value = '';
     alarmTime.value = '';
@@ -56,6 +57,7 @@ function renderTasks() {
 function toggleComplete(id) {
     const task = tasks.find(task => task.id === id);
     task.completed = !task.completed;
+    saveTasksToLocalStorage(); // Simpan ke Local Storage
     renderTasks();
 }
 
@@ -64,13 +66,19 @@ function editTask(id) {
     const newText = prompt('Edit your task:', task.text);
     if (newText !== null && newText.trim() !== '') {
         task.text = newText.trim();
+        saveTasksToLocalStorage(); // Simpan ke Local Storage
         renderTasks();
     }
 }
 
 function deleteTask(id) {
     tasks = tasks.filter(task => task.id !== id);
+    saveTasksToLocalStorage(); // Simpan ke Local Storage
     renderTasks();
+}
+
+function saveTasksToLocalStorage() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 function setAlarm(task) {
@@ -85,7 +93,7 @@ function setAlarm(task) {
         const timeDiff = alarmTime - now;
         setTimeout(() => {
             showReminder(task.text);
-            playNotificationSound(); // Memainkan suara notifikasi
+            playNotificationSound();
         }, timeDiff);
     } else {
         alert('The alarm time is in the past!');
@@ -105,9 +113,11 @@ function closeModal() {
 }
 
 function playNotificationSound() {
-    console.log("Playing notification sound..."); // Debugging
     const audio = new Audio('notification.mp3'); // Pastikan file 'notification.mp3' ada di folder proyek
     audio.play().catch(error => {
-        console.error("Error playing sound:", error); // Error handling
+        console.error("Error playing sound:", error);
     });
 }
+
+// Render tasks saat halaman dimuat
+renderTasks();
