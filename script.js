@@ -62,4 +62,33 @@ function toggleComplete(id) {
 function editTask(id) {
     const task = tasks.find(task => task.id === id);
     const newText = prompt('Edit your task:', task.text);
-    if (newText !== null && newText.trim()
+    if (newText !== null && newText.trim() !== '') {
+        task.text = newText.trim();
+        renderTasks();
+    }
+}
+
+function deleteTask(id) {
+    tasks = tasks.filter(task => task.id !== id);
+    renderTasks();
+}
+
+function setAlarm(task) {
+    const now = new Date();
+    const alarmTime = new Date();
+    const [hours, minutes] = task.alarm.split(':');
+    alarmTime.setHours(hours);
+    alarmTime.setMinutes(minutes);
+    alarmTime.setSeconds(0);
+
+    if (alarmTime > now) {
+        const timeDiff = alarmTime - now;
+        setTimeout(() => {
+            showReminder(task.text);
+        }, timeDiff);
+    } else {
+        alert('The alarm time is in the past!');
+    }
+}
+
+function showReminder(message
