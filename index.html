@@ -7,20 +7,68 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>To-Do List</h1>
-            <p>Your personal task manager with reminders</p>
-        </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">TaskPro</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="input-section">
-            <input type="text" id="taskInput" placeholder="Add a new task...">
-            <input type="time" id="alarmTime">
-            <button onclick="addTask()">Add Task</button>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Personal Task Manager</h1>
+            <p>Stay organized and on top of your tasks with reminders and more.</p>
         </div>
+    </section>
 
-        <ul id="taskList"></ul>
-    </div>
+    <!-- Main Content -->
+    <section id="features" class="main-content">
+        <div class="container">
+            <header>
+                <h2>To-Do List</h2>
+                <p>Manage your tasks efficiently with our professional task manager.</p>
+            </header>
+
+            <div class="input-section">
+                <input type="text" id="taskInput" placeholder="Add a new task...">
+                <input type="time" id="alarmTime">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+
+            <ul id="taskList"></ul>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are dedicated to helping you stay productive and organized. Our task manager is designed to make your life easier with intuitive features and reminders.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2023 TaskPro. All rights reserved.</p>
+    </footer>
 
     <!-- Popup Modal -->
     <div id="reminderModal" class="modal">
