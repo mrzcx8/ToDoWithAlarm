@@ -1,13 +1,235 @@
-/* Modal Styles */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3498db;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #ecf0f1;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x1080') no-repeat center/cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.main-content .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.main-content header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-content header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.main-content header p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#taskInput, #alarmTime {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #ecf0f1;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #bdc3c7;
+}
+
+li button {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+li button:hover {
+    background-color: #c0392b;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+.footer {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Modal */
 .modal {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
@@ -20,7 +242,6 @@
     max-width: 400px;
     text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.4s ease-in-out;
 }
 
 .modal h2 {
