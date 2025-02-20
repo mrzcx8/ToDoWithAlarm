@@ -215,3 +215,76 @@ li button:hover {
 
 .contact-form button:hover {
     background-color: #2980b9;
+}
+
+/* Footer */
+.footer {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal h2 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.modal p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.modal button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #2980b9;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #333;
+}
