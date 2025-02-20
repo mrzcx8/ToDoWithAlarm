@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9fafb;
+    background-color: #f0f8ff; /* Warna biru muda */
     color: #333;
     line-height: 1.6;
 }
@@ -17,9 +17,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3498db;
+    background-color: #3498db; /* Warna biru profesional */
     padding: 10px 20px;
     color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
 .navbar .logo {
@@ -41,7 +42,7 @@ body {
 }
 
 .navbar .nav-links a:hover {
-    color: #ecf0f1;
+    color: #ecf0f1; /* Efek hover */
 }
 
 /* Hero Section */
@@ -54,11 +55,12 @@ body {
     align-items: center;
     color: white;
     text-align: center;
+    animation: fadeIn 1s ease-in-out; /* Animasi fade-in */
 }
 
 .hero h1 {
     font-size: 3rem;
-    color: #3498db;
+    color: #3498db; /* Warna biru mencolok */
     margin-bottom: 20px;
     position: relative;
     top: 20px;
@@ -73,11 +75,10 @@ body {
 .main-content {
     padding: 40px 20px;
     background-color: #fff;
-}
-
-.main-content .container {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    border-radius: 12px;
+    margin: 20px auto;
     max-width: 800px;
-    margin: 0 auto;
 }
 
 .main-content header {
@@ -88,6 +89,7 @@ body {
 .main-content header h2 {
     font-size: 2rem;
     margin-bottom: 10px;
+    color: #3498db; /* Warna biru mencolok */
 }
 
 .main-content header p {
@@ -112,7 +114,7 @@ body {
 
 button {
     padding: 12px 20px;
-    background-color: #3498db;
+    background-color: #3498db; /* Warna biru profesional */
     color: white;
     border: none;
     border-radius: 8px;
@@ -121,7 +123,7 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Warna biru lebih gelap saat hover */
 }
 
 ul {
@@ -138,6 +140,7 @@ li {
     justify-content: space-between;
     align-items: center;
     transition: transform 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
 li.completed {
@@ -159,70 +162,13 @@ li button:hover {
     background-color: #c0392b;
 }
 
-/* About Section */
-.about {
-    padding: 40px 20px;
-    background-color: #ecf0f1;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.about p {
-    font-size: 1rem;
-    color: #333;
-}
-
-/* Contact Section */
-.contact {
-    padding: 40px 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form input, .contact-form textarea {
-    padding: 12px;
-    border: 1px solid #dfe4ea;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    padding: 12px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #2980b9;
-}
-
 /* Footer */
 .footer {
-    background-color: #3498db;
+    background-color: #3498db; /* Warna biru profesional */
     color: white;
     text-align: center;
     padding: 20px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
 /* Modal */
@@ -247,11 +193,12 @@ li button:hover {
     max-width: 400px;
     text-align: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out; /* Animasi fade-in */
 }
 
 .modal h2 {
     font-size: 1.5rem;
-    color: #3498db;
+    color: #3498db; /* Warna biru mencolok */
     margin-bottom: 15px;
 }
 
@@ -263,7 +210,7 @@ li button:hover {
 
 .modal button {
     padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #3498db; /* Warna biru profesional */
     color: white;
     border: none;
     border-radius: 8px;
@@ -272,7 +219,7 @@ li button:hover {
 }
 
 .modal button:hover {
-    background-color: #2980b9;
+    background-color: #2980b9; /* Warna biru lebih gelap saat hover */
 }
 
 .close-btn {
@@ -287,4 +234,16 @@ li button:hover {
 
 .close-btn:hover {
     color: #333;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
