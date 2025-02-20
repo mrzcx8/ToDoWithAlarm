@@ -18,14 +18,14 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #3498db; /* Warna biru profesional */
-    padding: 10px 20px;
-    color: white;
+    padding: 15px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
 }
 
 .navbar .logo {
     font-size: 1.5rem;
     font-weight: bold;
+    color: white;
 }
 
 .navbar .nav-links {
@@ -160,6 +160,70 @@ li button {
 
 li button:hover {
     background-color: #c0392b;
+}
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3498db; /* Warna biru mencolok */
+}
+
+.about p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    border-radius: 12px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3498db; /* Warna biru mencolok */
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #dfe4ea;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #3498db; /* Warna biru profesional */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #2980b9; /* Warna biru lebih gelap saat hover */
 }
 
 /* Footer */
